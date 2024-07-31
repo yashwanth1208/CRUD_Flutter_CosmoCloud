@@ -1,3 +1,5 @@
+import 'contact_method.dart';
+
 class Employee {
   String id;
   String name;
@@ -51,27 +53,6 @@ class Employee {
         'zipCode': zipCode,
       },
       'contactMethods': contactMethods.map((i) => i.toJson()).toList(),
-    };
-  }
-}
-
-class ContactMethod {
-  String contactMethod;
-  String value;
-
-  ContactMethod({required this.contactMethod, required this.value});
-
-  factory ContactMethod.fromJson(Map<String, dynamic> json) {
-    return ContactMethod(
-      contactMethod: json['contactMethod'],
-      value: json['value'],
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'contactMethod': contactMethod,
-      'value': value,
     };
   }
 }
